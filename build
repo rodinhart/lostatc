@@ -1,0 +1,2 @@
+clang --target=wasm32 -c -O1 -o app.o app1.c
+wasm-ld-8 --no-entry --export square -o app.wasm app.o

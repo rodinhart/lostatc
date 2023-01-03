@@ -14,13 +14,7 @@
     WebAssembly.instantiateStreaming(fetch("./app.wasm"), {}).then(result => {
       const { instance: { exports: { memory, render } } } = result
 
-      render(0)
-      const buffer = new Uint8Array(memory.buffer,0,1024)
-      let len = 0
-      while (buffer[len] !== 0) {
-        len += 1
-      }
-
+      const len = render(0)
       console.log(new TextDecoder().decode(new Uint8Array(memory.buffer,0,len)))
     })
   </script>

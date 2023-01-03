@@ -54,3 +54,11 @@ Finally, loading the wasm in html
   </body>
 </html>
 ```
+
+This should log `16` to the console. If it doesn't log a number, look for an error message. If it logs some different number, throw your computer out the window.
+
+_we are now at `app1.c`_
+
+## Seeing if it will float at all
+
+Let us return some html from C. Yeah, you heard me.
